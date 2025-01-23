@@ -18,24 +18,28 @@
     </header>
 
     <section class="content">
-        <h1>Contact Me</h1>
+        <h1 style="justify-content: center;">Contact Me</h1>
         <p>Feel free to reach out via email or use the contact form below to send me a message.</p>
         
         <!-- Contact Form -->
         <form action="submit_form.php" method="POST" class="contact-form">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <span id="nameError" class="error"></span>
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
+            <input type="email" id="email" name="email" placeholder="Your email">
+            <span id="emailError" class="error"></span>
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message"></textarea>
+            <span id="messageError" class="error"></span>
 
             <button type="submit">Send Message</button>
         </form>
     </section>
-
+      
+    <script src="js/validation.js"></script>
     <footer>
         &copy; 2025 Benson Benson. All rights reserved.
     </footer>

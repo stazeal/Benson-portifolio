@@ -1,10 +1,14 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    width: 100%;
+    height: 100%;
 }
 
+/* Header Section */
 header {
     display: flex;
     justify-content: space-between;
@@ -23,13 +27,15 @@ header .logo {
 header nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #FF5E32;
+    font-weight: bolder;
 }
 
 header nav a:hover {
     color: #007B5E;
 }
 
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -45,7 +51,11 @@ header nav a:hover {
 .hero h1 {
     font-size: 2.5em;
     margin: 0;
-    color: #222;
+    color: #007B5E;
+}
+
+.hero h1 span {
+    color: #FF5E32;
 }
 
 .hero p {
@@ -73,7 +83,7 @@ header nav a:hover {
 
 .hero .buttons a:hover {
     background-color: #fff;
-    color: #007B5E;
+    color: #FF5E32;
 }
 
 .hero img {
@@ -81,20 +91,69 @@ header nav a:hover {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+.content{
+    align-items: center;
+}
 
+/* Skills Section */
+.skills-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.skills-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill i {
+    font-size: 2.5rem;
+    color: #007B5E;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Social Icons */
 .social-icons {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .social-icons a {
     margin-right: 10px;
-    font-size: 1.2em;
+    font-size: 2.2em;
     color: #007B5E;
 }
 
-social-icons a:hover {
+.social-icons a:hover {
     color: #00593C;
 }
+
+/* Contact Form */
 .contact-form {
     max-width: 600px;
     margin: 20px auto;
@@ -102,7 +161,7 @@ social-icons a:hover {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(7, 194, 116, 0.1);
 }
 
 .contact-form label {
@@ -138,12 +197,7 @@ social-icons a:hover {
     background-color: #0056b3;
 }
 
-
-.content {
-    padding: 2em;
-    text-align: center;
-}
-
+/* Projects Section */
 .projects-container {
     display: flex;
     justify-content: center;
@@ -179,12 +233,71 @@ social-icons a:hover {
 .project-info p {
     color: #777;
 }
+
+/* Footer Section */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
+    margin-top: 60px;
     background-color: #007B5E;
     color: #fff;
 }
+.input-control {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-control .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.input-control.success input,
+.input-control.success textarea {
+    border-color: green;
+}
+
+.input-control.error input,
+.input-control.error textarea {
+    border-color: red;
+}
+
+
+/* Responsive Design */
+@media (max-width: 425px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+        height: 45%;
+        padding: 4vw 6vw;
+    }
+
+    .right h1 {
+        font-size: 9vw;
+        line-height: 9vw;
+    }
+
+    .right p {
+        font-size: 4vw;
+        width: 100%;
+        margin: 5vw 0;
+    }
+
+    .left {
+        width: 100%;
+        height: 55%;
+    }
+}
+.error {
+    color: red;
+    font-size: 0.875em;
+    margin-left: 5px;
+}
+
 
 footer a {
     color: #fff;
@@ -193,4 +306,33 @@ footer a {
 
 footer a:hover {
     color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 425px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+        height: 45%;
+        padding: 4vw 6vw;
+    }
+
+    .right h1 {
+        font-size: 9vw;
+        line-height: 9vw;
+    }
+
+    .right p {
+        font-size: 4vw;
+        width: 100%;
+        margin: 5vw 0;
+    }
+
+    .left {
+        width: 100%;
+        height: 55%;
+    }
 }
